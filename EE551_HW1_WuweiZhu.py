@@ -62,12 +62,14 @@ def lists():
     for row in A:
         c.append(row[2]);
     print('c = ',c);
+    
     # Collect only the even items of the diagonal of matrix A using list comprehension
     d = [];
     for each in A[0][0], A[0][2], A[1][1], A[2][0], A[2][2]:
         if (each % 2 == 0):
             d.append(each);
     print('d = ',d);
+    
     # We can convert a single character to its underlying integer code (e.g., its ASCII byte value)
     # by passing it to the built-in ord function. Generate a list of these integers to represent
     # each character of the string "Stevens" using list comprehension.
@@ -101,16 +103,23 @@ def dictionaries():
     #   name => {first_name => "Grace", last_name => "Hopper"} (a dictionary)
     #   jobs => ["scientist", "engineer"] (a list)
     #   age => 85
-    amzing_grace = {'name' : {'first_name' : 'Grace', 'last_name' : 'Hopper'}, 'jobs' : ['scientist', 'engineer'], 'age' : 85};
+    dict = {'name' : {'first_name' : 'Grace', 'last_name' : 'Hopper'}, 'jobs' : ['scientist', 'engineer'], 'age' : 85};
     print('amzing_grace = ', dict);
+    
     # Add "programmer" to the list of jobs Grace has
     # IMPLEMENT IT HERE
-    amazing_grace['jobs'].append('programmer');
-    # Get the third job Grace has that you recently added
-    p = amazing_grace['jobs'][2];
-    print['The third job Grace has is ', p];
-    # Use the sort() function to get sorted keys of amazing_grace in alphabetically ascending order
+    dict['jobs'].append('programmer');
     
+    # Get the third job Grace has that you recently added
+    p = dict['jobs'][2];
+    print('The third job Grace has is ', p);
+    
+    # Use the sort() function to get sorted keys of amazing_grace in alphabetically ascending order
+    k = [];
+    for key in dict.keys():
+        k.append(key);
+    k.sort();
+    print('k = ', k);
     return a, f, p, k
 
 numbers_and_strings()
